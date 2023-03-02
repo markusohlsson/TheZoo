@@ -1,0 +1,42 @@
+.SelectedAnimal {
+    display:flex;
+    width:100%;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap:10px;
+    height:100vh;
+    h2 {
+    width:100%;
+    height:25px;
+    }
+    h4 {
+        width:100%;
+    }
+    p{
+    width:100%;
+    }
+    img {
+       width:30%;
+       height:30%; 
+       object-fit: cover;
+    }
+    .description{
+        width:60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttoncontainer {
+        width:100%;
+    .feed {
+        margin:5px;
+        width:150px;
+        height:50px;
+    }
+    .showAnimals {
+        margin:5px;
+        width:150px;
+        height:50px;
+    }
+}
+}

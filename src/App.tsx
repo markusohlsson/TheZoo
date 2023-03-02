@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 function App() {
+const location = useLocation();
+const navigate = useNavigate();
+    const handleClick = ()=>{
+      navigate('../animals');
+  };
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {location.pathname === "/" && <div><h3> Välkommen till The Zoo</h3><p> Klicka på knappen nedan för att visa alla djur!</p><button onClick={handleClick}>Visa djuren!</button> </div>}
+<Outlet></Outlet>
     </div>
+   
   );
 }
 
